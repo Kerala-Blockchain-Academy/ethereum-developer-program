@@ -1,0 +1,17 @@
+{
+  "name": "ethers-playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.mjs",
+  "scripts": {
+    "node": "hardhat node"
+  },
+  "keywords": [],
+  "author": "Kerala Blockchain Academy",
+  "license": "MIT",
+  "dependencies": {
+    "ethers": "^6.12.1",
+    "hardhat": "^2.22.4",
+    "solc": "^0.8.25"
+  }
+}
