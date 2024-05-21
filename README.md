@@ -1,4 +1,6 @@
+
 <div align="justify">
+  **The code in this repository is a part of the Ethereum Developer Program. Kindly check the [wiki](https://github.com/ananthanir/ethereum-developer-program/wiki) to access the course content.**
 <div align="center">
 <img src="https://github.com/ananthanir/ethereum-developer-program/blob/main/assets/images/course-name.png" alt="Ethereum History" width="100%" height="100%">
 </div>
@@ -28,6 +30,7 @@ Upon completion of this course, students will have the foundation to pursue dive
 Level up together! Join our Discord, where like-minded learners connect and grow.
 
 Discord Sever: [https://discord.gg/hcAzEWNDv3](https://discord.gg/hcAzEWNDv3)
+
 
 </div>
 
