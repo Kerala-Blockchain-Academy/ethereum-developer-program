@@ -1,17 +1,33 @@
-# Ethereum Developer Program
+<div align="justify">
+<div align="center">
+<img src="https://github.com/ananthanir/ethereum-developer-program/blob/main/assets/images/course-name.png" alt="Ethereum History" width="100%" height="100%">
+</div>
 
-The **Ethereum Developer Program** is designed for blockchain enthusiasts interested in computer programming or aspiring to start their software development career as a Blockchain Developer with a specialisation in the **Ethereum** platform. The learner will gain an in-depth conceptual understanding of Blockchain technology with clarity on the components and architecture of the Ethereum platform and hands-on experience in **Solidity** programming language to write **Smart Contracts** and develop **Decentralized Applications** (DApps) focused on real-life use cases.
+***
 
-## Objective
+Welcome to the **Ethereum Developer Program** offered by **Kerala Blockchain Academy**..!!
 
-Equip aspirants with in-depth knowledge of Blockchain and expertise in the Ethereum platform, focusing on Solidity and Decentralised Application (DApp) development.
+The Ethereum Developer Course is a 60-hour program that provides a rigorous introduction to Ethereum blockchain development. The curriculum examines Ethereum's core architecture, principles of smart contract design, and the utilisation of Web3 development tools. Students will gain proficiency in the Solidity programming language, enabling them to develop secure and efficient smart contracts that underpin decentralised applications (DApps). This course provides a comprehensive understanding of the Ethereum ecosystem, equipping students to make informed decisions as they explore its potential. Students will learn to identify real-world problems and design effective blockchain-based solutions through instructor-led sessions and hands-on project development. Our supportive KBA community chat group will be there every step of the way. Throughout the program, students will develop a decentralised mindset, empowering students to contribute meaningfully to the Ethereum ecosystem through open-source projects, hackathons, or even the Ethereum Improvement Proposal (EIP) process.
 
-## Prerequisites
+Upon completion of this course, students will have the foundation to pursue diverse long-term pathways within the Ethereum ecosystem. They will gain the knowledge and inspiration to participate in events like the EthIndia hackathon, potentially even developing service-based blockchain solutions like Infura (node providers) or Moralis (ecosystem providers). Students can explore cutting-edge research in areas such as L2 solutions (e.g., Optimism, Arbitrum) and zero-knowledge proofs (e.g., zk-SNARKs). They may build dapps on Ethereum and EVM-based chains, create cross-chain bridges and oracles, or even engage in core Ethereum research through EIP (Ethereum Improvement Proposal) design and implementation. This course aligns with the Ethereum Foundation's commitment to decentralisation and innovation, preparing students to become active contributors to the Web3 landscape, and students will have active support from KBA for all of the above future endeavours.
 
-[![JavaScript Badge](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000&style=for-the-badge)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/)
-[![Node.js Badge](https://img.shields.io/badge/Node.js-393?logo=nodedotjs&logoColor=fff&style=for-the-badge)](https://nodejs.org/)
-[![React Badge](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=000&style=for-the-badge)](https://react.dev/)
-[![Git Badge](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=fff&style=for-the-badge)](https://git-scm.com/)
-[![GitHub Badge](https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=fff&style=for-the-badge)](https://github.com/)
-[![HTML5 Badge](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=fff&style=for-the-badge)](https://developer.mozilla.org/en-US/docs/Web/HTML)
-[![CSS3 Badge](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=fff&style=for-the-badge)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+# Course Outcomes
+- **Ethereum Fundamentals Mastery**: Possess a deep understanding of the Ethereum blockchain's core principles, network architecture, and client operation.
+- **Ethereum Ecosystem Navigation**: Demonstrate a comprehensive grasp of the Ethereum ecosystem's major components, key players, and evolving trends.
+- **Solidity Proficiency**: Write secure, optimised, and well-structured smart contracts with confidence.
+- **Web3 Toolkit Expertise**: Seamlessly utilise essential tools and frameworks for developing and testing decentralised applications.
+- **Decentralised Application Architecture**: Design and implement robust and fully decentralised applications from conception to deployment.
+- **Decentralisation-First Thinking**:  Critically assess use cases to determine the true potential and benefits of decentralised solutions.
+
+# Development Environment
+<div align="center">
+<img src="https://github.com/ananthanir/ethereum-developer-program/blob/main/assets/images/dev-environment.png" alt="Ethereum History" width="80%" height="80%">
+</div>
+
+# Community
+Level up together! Join our Discord, where like-minded learners connect and grow.
+
+Discord Sever: [https://discord.gg/hcAzEWNDv3](https://discord.gg/hcAzEWNDv3)
+
+</div>
+
