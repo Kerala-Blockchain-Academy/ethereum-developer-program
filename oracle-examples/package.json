@@ -1,0 +1,20 @@
+{
+  "name": "oracle-examples",
+  "version": "1.0.0",
+  "scripts": {
+    "node": "hardhat node",
+    "deploy": "hardhat ignition deploy ./ignition/modules/Oracle.js",
+    "v1": "node ./callOracle.mjs",
+    "v2": "node ./listenOracle.mjs"
+  },
+  "author": "Kerala Blockchain Academy",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.4"
+  },
+  "dependencies": {
+    "axios": "^1.7.2",
+    "ethers": "^6.12.1"
+  }
+}
