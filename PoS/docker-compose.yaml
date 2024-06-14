@@ -1,0 +1,12 @@
+version: '3'
+services:
+  node-1:
+    network_mode: host
+    extends:
+      file: "./Node-1/docker-compose.yaml"
+      service: node
+  node-2:
+    network_mode: host
+    extends:
+      file: "./Node-2/docker-compose.yaml"
+      service: node

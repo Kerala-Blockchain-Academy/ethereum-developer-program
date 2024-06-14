@@ -1,0 +1,26 @@
+# Valid TOML config file
+
+data-path="/Node-1/data"
+genesis-file="/Node-1/genesis.json"
+
+nat-method="DOCKER"
+host-whitelist=["*"]
+
+# No Cost Tx
+min-gas-price=0
+
+# P2P related
+
+p2p-host="127.0.0.1"
+p2p-port=30313
+
+# RPC related
+
+rpc-http-enabled=true
+rpc-http-host="127.0.0.1"
+rpc-http-port=9547
+rpc-http-api=["ADMIN", "CLIQUE", "ETH", "NET", "TXPOOL", "WEB3", "DEBUG", "TXPOOL", "TRACE", "PLUGINS"]
+rpc-http-cors-origins=["*"]
+
+# Connections
+rpc-http-max-active-connections=999999999
