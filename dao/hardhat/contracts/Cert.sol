@@ -1,33 +1,33 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.20;
 
-import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract Cert is Ownable { // EOA, EC, Self, Child
+contract Cert is Ownable {
 
-    struct Certificate {
-        string name;
-        string course;
-        string grade;
-        string date;
-    }
+    constructor(address initialOwner)
+        Ownable(initialOwner)
+    {}
 
-    mapping (uint256 => Certificate) public Certificates;
+  struct Certificate {
+      string name;
+      string course;
+      string grade;
+      string date;
+  }
 
-    event issued(uint256 cid, string cidate);
+  mapping (uint256 => Certificate) public Certificates;
 
-    constructor(address _issuer) Ownable(_issuer)
-    { }
+  event issued(uint256 cid, string cidate);
 
-    function issue (
-        uint256 _id,
-        string memory _name,
-        string memory _course,
-        string memory _grade,
-        string memory _date
-    ) public onlyOwner {
-        Certificates[_id] = Certificate(_name, _course, _grade, _date);
-        // Certifiactes[_id].name = _name;
-        emit issued(_id, _date);
-    }
+  function issue (
+      uint256 _id,
+      string memory _name,
+      string memory _course,
+      string memory _grade,
+      string memory _date) public onlyOwner {
+          Certificates[_id] = Certificate(_name, _course, _grade, _date);
+          emit issued(_id, _date);
+      }
 }
+
