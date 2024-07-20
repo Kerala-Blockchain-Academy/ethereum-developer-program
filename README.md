@@ -1,4 +1,4 @@
-**The code in this repository is a part of the Ethereum Developer Program. Kindly check the [wiki](https://github.com/ananthanir/ethereum-developer-program/wiki) to access the course content.**
+**The code in this repository is a part of the Ethereum Developer Program. To access the course content, kindly check the [wiki](https://github.com/ananthanir/ethereum-developer-program/wiki).**
 
 <div align="justify">
 <div align="center">
@@ -32,6 +32,6 @@ This course aligns with the Ethereum Foundation's commitment to decentralisation
 
 Level up together! Join our Discord, where like-minded learners connect and grow.
 
-Discord Sever: [https://discord.gg/hcAzEWNDv3](https://discord.gg/hcAzEWNDv3)
+Discord Server: [https://discord.gg/hcAzEWNDv3](https://discord.gg/hcAzEWNDv3)
 
 </div>
