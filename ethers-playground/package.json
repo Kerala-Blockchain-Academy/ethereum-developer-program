@@ -10,8 +10,8 @@
   "author": "Kerala Blockchain Academy",
   "license": "MIT",
   "dependencies": {
-    "ethers": "^6.12.1",
-    "hardhat": "^2.22.4",
-    "solc": "^0.8.25"
+    "ethers": "^6.13.1",
+    "hardhat": "^2.22.6",
+    "solc": "^0.8.26"
   }
 }
