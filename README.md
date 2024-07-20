@@ -1,7 +1,8 @@
 **The code in this repository is a part of the Ethereum Developer Program. Kindly check the [wiki](https://github.com/ananthanir/ethereum-developer-program/wiki) to access the course content.**
+
 <div align="justify">
 <div align="center">
-<img src="https://github.com/ananthanir/ethereum-developer-program/blob/main/assets/images/course-name.png" alt="Ethereum History" width="100%" height="100%">
+<img src="https://github.com/ananthanir/ethereum-developer-program/blob/main/assets/images/course-name.png" alt="Ethereum Developer Program" width="100%" height="100%">
 </div>
 
 ***
@@ -13,6 +14,7 @@ The Ethereum Developer Course is a 60-hour program that provides a rigorous intr
 This course aligns with the Ethereum Foundation's commitment to decentralisation and innovation, preparing students to become active contributors to the Web3 landscape, and students will have active support from KBA for all of the above future endeavours.
 
 # Course Outcomes
+
 - **Ethereum Fundamentals Mastery**: Possess a deep understanding of the Ethereum blockchain's core principles, network architecture, and client operation.
 - **Ethereum Ecosystem Navigation**: Demonstrate a comprehensive grasp of the Ethereum ecosystem's major components, key players, and evolving trends.
 - **Solidity Proficiency**: Write secure, optimised, and well-structured smart contracts with confidence.
@@ -21,15 +23,15 @@ This course aligns with the Ethereum Foundation's commitment to decentralisation
 - **Decentralisation-First Thinking**:  Critically assess use cases to determine the true potential and benefits of decentralised solutions.
 
 # Development Environment
+
 <div align="center">
-<img src="https://github.com/ananthanir/ethereum-developer-program/blob/main/assets/images/dev-environment.png" alt="Ethereum History" width="80%" height="80%">
+<img src="https://github.com/ananthanir/ethereum-developer-program/blob/main/assets/images/dev-environment.png" alt="Development Environment" width="80%" height="80%">
 </div>
 
 # Community
+
 Level up together! Join our Discord, where like-minded learners connect and grow.
 
 Discord Sever: [https://discord.gg/hcAzEWNDv3](https://discord.gg/hcAzEWNDv3)
 
-
 </div>
-
