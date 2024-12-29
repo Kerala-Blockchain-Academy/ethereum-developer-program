@@ -1,9 +1,9 @@
 import axios from "axios";
 import { Contract, JsonRpcProvider, Wallet } from "ethers";
-import oracleV1 from "./artifacts/contracts/OracleV1.sol/OracleV1.json" assert { type: "json" };
-import details from "./ignition/deployments/chain-31337/deployed_addresses.json" assert { type: "json" };
+import oracleV1 from "./artifacts/contracts/OracleV1.sol/OracleV1.json";
+import details from "./ignition/deployments/chain-31337/deployed_addresses.json";
 
-const timer = (ms) => new Promise((res) => setTimeout(res, ms));
+const timer = (ms: number) => new Promise((res) => setTimeout(res, ms));
 
 const provider = new JsonRpcProvider("http://127.0.0.1:8545");
 const wallet = new Wallet(

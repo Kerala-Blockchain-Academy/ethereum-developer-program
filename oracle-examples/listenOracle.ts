@@ -1,7 +1,7 @@
 import axios from "axios";
 import { Contract, Wallet, WebSocketProvider } from "ethers";
-import oracleV2 from "./artifacts/contracts/OracleV2.sol/OracleV2.json" assert { type: "json" };
-import details from "./ignition/deployments/chain-31337/deployed_addresses.json" assert { type: "json" };
+import oracleV2 from "./artifacts/contracts/OracleV2.sol/OracleV2.json";
+import details from "./ignition/deployments/chain-31337/deployed_addresses.json";
 
 const wsprovider = new WebSocketProvider("ws://127.0.0.1:8545");
 const wallet = new Wallet(
