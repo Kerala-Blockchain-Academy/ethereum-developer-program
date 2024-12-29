@@ -1,0 +1,14 @@
+{
+  "name": "viem-playground",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "node": "hardhat node"
+  },
+  "dependencies": {
+    "hardhat": "^2.22.17",
+    "solc": "^0.8.28",
+    "tsx": "^4.19.2",
+    "viem": "^2.21.57"
+  }
+}
