@@ -1,11 +1,11 @@
-**The code in this repository is a part of the Ethereum Developer Program. To access the course content, kindly check the [wiki](https://github.com/ananthanir/ethereum-developer-program/wiki).**
+**The code in this repository is a part of the Ethereum Developer Program. To access the course content, kindly check the [wiki](https://github.com/Kerala-Blockchain-Academy/ethereum-developer-program/wiki).**
 
 <div align="justify">
 <div align="center">
-<img src="https://github.com/ananthanir/ethereum-developer-program/blob/main/assets/images/course-name.png" alt="Ethereum Developer Program" width="100%" height="100%">
+<img src="https://github.com/Kerala-Blockchain-Academy/ethereum-developer-program/blob/main/assets/images/course-name.png" alt="Ethereum Developer Program" width="100%" height="100%">
 </div>
 
-***
+---
 
 Welcome to the **Ethereum Developer Program** offered by **Kerala Blockchain Academy**..!!
 
@@ -25,7 +25,7 @@ This course aligns with the Ethereum Foundation's commitment to decentralisation
 # Development Environment
 
 <div align="center">
-<img src="https://github.com/ananthanir/ethereum-developer-program/blob/main/assets/images/dev-environment.png" alt="Development Environment" width="80%" height="80%">
+<img src="https://github.com/Kerala-Blockchain-Academy/ethereum-developer-program/blob/main/assets/images/dev-environment.png" alt="Development Environment" width="80%" height="80%">
 </div>
 
 # Community
