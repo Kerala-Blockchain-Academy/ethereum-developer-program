@@ -1,3 +1,4 @@
+import 'dotenv/config'
 import { Contract, WebSocketProvider } from 'ethers'
 import details from './lib/deployed_addresses.json'
 import Cert from './lib/Cert.json'
