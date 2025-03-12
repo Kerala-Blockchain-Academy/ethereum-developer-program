@@ -1,5 +1,5 @@
 {
-  "name": "viem-playground",
+  "name": "viem-snippet",
   "module": "index.ts",
   "type": "module",
   "scripts": {

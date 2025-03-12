@@ -16,7 +16,7 @@ console.log("Chain ID:", network.chainId);
 let latestBlock = await provider.getBlockNumber();
 console.log("Latest Block:", latestBlock);
 
-const CONTRACT_FILE = "contracts/Storage.sol";
+const CONTRACT_FILE = "./../common/contracts/Storage.sol";
 
 const content = readFileSync(CONTRACT_FILE).toString();
 

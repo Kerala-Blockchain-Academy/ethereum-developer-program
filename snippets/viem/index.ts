@@ -16,7 +16,7 @@ console.log('Address:', account)
 
 console.log('Chain ID:', client.chain.id)
 
-const CONTRACT_FILE = 'contracts/Storage.sol'
+const CONTRACT_FILE = './../common/contracts/Storage.sol'
 
 const content = readFileSync(CONTRACT_FILE).toString()
 
