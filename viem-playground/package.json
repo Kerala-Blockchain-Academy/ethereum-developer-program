@@ -6,9 +6,9 @@
     "node": "hardhat node"
   },
   "dependencies": {
-    "hardhat": "^2.22.17",
-    "solc": "^0.8.28",
-    "tsx": "^4.19.2",
-    "viem": "^2.21.57"
+    "hardhat": "^2.22.19",
+    "solc": "^0.8.29",
+    "tsx": "^4.19.3",
+    "viem": "^2.23.10"
   }
 }
