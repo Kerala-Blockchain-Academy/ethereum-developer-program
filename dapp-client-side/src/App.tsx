@@ -1,10 +1,11 @@
-import { useState } from 'react'
+import { ChangeEvent, FormEvent, useState } from 'react'
+import './App.css'
 import { Contract, BrowserProvider } from 'ethers'
-import details from './deployed_addresses.json'
+import { contractAddress } from './deployed_addresses.json'
 import { abi } from './Cert.json'
 
 function App() {
-  const [output, setOutput] = useState("")
+  const [output, setOutput] = useState('')
   const [queryID, setQueryID] = useState(0)
 
   const [formData, setFormData] = useState({
@@ -23,18 +24,18 @@ function App() {
     alert(`Successfully Connected ${signer.address}`)
   }
 
-  const handleChange = (event) => {
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target
     setFormData((prevState) => ({ ...prevState, [name]: value }))
   }
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
 
     console.log(formData)
 
     const signer = await provider.getSigner()
-    const instance = new Contract(details['CertModule#Cert'], abi, signer)
+    const instance = new Contract(contractAddress, abi, signer)
 
     const trx = await instance.issue(
       formData.id,
@@ -54,7 +55,7 @@ function App() {
 
   const getCertificate = async () => {
     const signer = await provider.getSigner()
-    const instance = new Contract(details['CertModule#Cert'], abi, signer)
+    const instance = new Contract(contractAddress, abi, signer)
 
     const result = await instance.Certificates(queryID)
     if (result) {
@@ -67,6 +68,7 @@ function App() {
 
   return (
     <div>
+      <h1>Certificate DApp</h1>
       <button onClick={connectMetaMask}>Connect MetaMask</button>
       <br />
       <br />
@@ -137,7 +139,7 @@ function App() {
           id="queryID"
           name="queryID"
           value={queryID}
-          onChange={(e) => setQueryID(e.target.value)}
+          onChange={(e) => setQueryID(Number(e.target.value))}
         />
       </div>
       <button onClick={getCertificate}>Get</button>
