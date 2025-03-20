@@ -1,5 +1,3 @@
-**The code in this repository is a part of the Ethereum Developer Program. To access the course content, kindly check the [wiki](https://github.com/Kerala-Blockchain-Academy/ethereum-developer-program/wiki).**
-
 <div align="justify">
 <div align="center">
 <img src="https://github.com/Kerala-Blockchain-Academy/ethereum-developer-program/blob/main/assets/images/course-name.png" alt="Ethereum Developer Program" width="100%" height="100%">
@@ -7,8 +5,28 @@
 
 ---
 
-Welcome to the **Ethereum Developer Program** offered by **Kerala Blockchain Academy**..!!
+### Welcome to the **Ethereum Developer Program** offered by **Kerala Blockchain Academy**..!!
+<br>
 
+<p align="center">
+  <a href="https://github.com/Kerala-Blockchain-Academy/ethereum-developer-program/wiki">
+    <img src="https://github.com/Kerala-Blockchain-Academy/ethereum-developer-program/blob/readme/assets/images/Docs.png" alt="Docs" width="35%">
+  </a>
+  <a href="https://www.youtube.com/playlist?list=PLtzGVTBMqzgCxkb6kyGIbGkERfHzzqcbR">
+    <img src="https://github.com/Kerala-Blockchain-Academy/ethereum-developer-program/blob/readme/assets/images/Videos.png" alt="Videos" width="35%">
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/Kerala-Blockchain-Academy/ethereum-developer-program/discussions">
+    <img src="https://github.com/Kerala-Blockchain-Academy/ethereum-developer-program/blob/readme/assets/images/GitHub.png" alt="GitHub" width="25%">
+  </a>
+  <a href="https://t.me/+nhLjl_I35EViZWM1">
+    <img src="https://github.com/Kerala-Blockchain-Academy/ethereum-developer-program/blob/readme/assets/images/Telegram.png" alt="Telegram" width="25%">
+  </a>
+</p>
+
+<br>
 The Ethereum Developer Course is a 60-hour program that provides a rigorous introduction to Ethereum blockchain development. The curriculum examines Ethereum's core architecture, principles of smart contract design, and the utilisation of Web3 development tools. Students will gain proficiency in the Solidity programming language, enabling them to develop secure and efficient smart contracts that underpin decentralised applications (DApps). This course provides a comprehensive understanding of the Ethereum ecosystem, equipping students to make informed decisions as they explore its potential. Our supportive KBA community chat group will be there every step of the way. Throughout the program, students will develop a decentralised mindset, empowering students to contribute meaningfully to the Ethereum ecosystem through open-source projects, hackathons, or even the Ethereum Improvement Proposal (EIP) process.
 
 This course aligns with the Ethereum Foundation's commitment to decentralisation and innovation, preparing students to become active contributors to the Web3 landscape, and students will have active support from KBA for all of the above future endeavours.
