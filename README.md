@@ -10,46 +10,35 @@
 
 <p align="center">
   <a href="https://github.com/Kerala-Blockchain-Academy/ethereum-developer-program/wiki">
-    <img src="https://github.com/Kerala-Blockchain-Academy/ethereum-developer-program/blob/readme/assets/images/Docs.png" alt="Docs" width="35%">
+    <img src="https://github.com/Kerala-Blockchain-Academy/ethereum-developer-program/blob/readme/assets/images/Docs.png" alt="Docs" width="45%">
   </a>
   <a href="https://www.youtube.com/playlist?list=PLtzGVTBMqzgCxkb6kyGIbGkERfHzzqcbR">
-    <img src="https://github.com/Kerala-Blockchain-Academy/ethereum-developer-program/blob/readme/assets/images/Videos.png" alt="Videos" width="35%">
+    <img src="https://github.com/Kerala-Blockchain-Academy/ethereum-developer-program/blob/readme/assets/images/Videos.png" alt="Videos" width="45%">
   </a>
 </p>
 
 <p align="center">
   <a href="https://github.com/Kerala-Blockchain-Academy/ethereum-developer-program/discussions">
-    <img src="https://github.com/Kerala-Blockchain-Academy/ethereum-developer-program/blob/readme/assets/images/GitHub.png" alt="GitHub" width="25%">
+    <img src="https://github.com/Kerala-Blockchain-Academy/ethereum-developer-program/blob/readme/assets/images/GitHub.png" alt="GitHub" width="35%">
   </a>
   <a href="https://t.me/+nhLjl_I35EViZWM1">
-    <img src="https://github.com/Kerala-Blockchain-Academy/ethereum-developer-program/blob/readme/assets/images/Telegram.png" alt="Telegram" width="25%">
+    <img src="https://github.com/Kerala-Blockchain-Academy/ethereum-developer-program/blob/readme/assets/images/Telegram.png" alt="Telegram" width="35%">
   </a>
 </p>
 
 <br>
-The Ethereum Developer Course is a 60-hour program that provides a rigorous introduction to Ethereum blockchain development. The curriculum examines Ethereum's core architecture, principles of smart contract design, and the utilisation of Web3 development tools. Students will gain proficiency in the Solidity programming language, enabling them to develop secure and efficient smart contracts that underpin decentralised applications (DApps). This course provides a comprehensive understanding of the Ethereum ecosystem, equipping students to make informed decisions as they explore its potential. Our supportive KBA community chat group will be there every step of the way. Throughout the program, students will develop a decentralised mindset, empowering students to contribute meaningfully to the Ethereum ecosystem through open-source projects, hackathons, or even the Ethereum Improvement Proposal (EIP) process.
+Learn Ethereum development from the ground up! This course covers Ethereum’s core architecture, smart contract design, and Web3 tools. You'll gain hands-on experience with Solidity, enabling you to build secure DApps.  
+<br><br>
+Join our KBA community for support as you explore open-source projects, hackathons, and Ethereum Improvement Proposals (EIPs). This course aligns with the Ethereum Foundation’s vision, preparing you to contribute to the Web3 ecosystem with KBA’s ongoing support. 🚀
 
-This course aligns with the Ethereum Foundation's commitment to decentralisation and innovation, preparing students to become active contributors to the Web3 landscape, and students will have active support from KBA for all of the above future endeavours.
+# 📌 Course Outcomes
+| ✅ Ethereum Basics Mastery  | 🔗 Decentralization-First Mindset |
+|----------------------------|--------------------------------|
+| 💻 Solidity Coding Skills  | 🛠️ Web3 Tools Expertise        |
+| 🏗️ DApp Architecture Understanding | 🌍 Ethereum Ecosystem Know-How |
 
-# Course Outcomes
-
-- **Ethereum Fundamentals Mastery**: Possess a deep understanding of the Ethereum blockchain's core principles, network architecture, and client operation.
-- **Ethereum Ecosystem Navigation**: Demonstrate a comprehensive grasp of the Ethereum ecosystem's major components, key players, and evolving trends.
-- **Solidity Proficiency**: Write secure, optimised, and well-structured smart contracts with confidence.
-- **Web3 Toolkit Expertise**: Seamlessly utilise essential tools and frameworks for developing and testing decentralised applications.
-- **Decentralised Application Architecture**: Design and implement robust and fully decentralised applications from conception to deployment.
-- **Decentralisation-First Thinking**:  Critically assess use cases to determine the true potential and benefits of decentralised solutions.
-
-# Development Environment
+# 🛠️ Tools & Technologies
 
 <div align="center">
 <img src="https://github.com/Kerala-Blockchain-Academy/ethereum-developer-program/blob/main/assets/images/dev-environment.png" alt="Development Environment" width="80%" height="80%">
-</div>
-
-# Community
-
-Level up together! Join our Discord, where like-minded learners connect and grow.
-
-Discord Server: [https://discord.gg/hcAzEWNDv3](https://discord.gg/hcAzEWNDv3)
-
 </div>
