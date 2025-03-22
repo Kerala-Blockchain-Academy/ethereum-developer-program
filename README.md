@@ -10,19 +10,19 @@
 
 <p align="center">
   <a href="https://github.com/Kerala-Blockchain-Academy/ethereum-developer-program/wiki">
-    <img src="https://github.com/Kerala-Blockchain-Academy/ethereum-developer-program/blob/readme/assets/images/Docs.png" alt="Docs" width="45%">
+    <img src="https://github.com/Kerala-Blockchain-Academy/ethereum-developer-program/blob/main/assets/images/Docs.png" alt="Docs" width="45%">
   </a>
   <a href="https://www.youtube.com/playlist?list=PLtzGVTBMqzgCxkb6kyGIbGkERfHzzqcbR">
-    <img src="https://github.com/Kerala-Blockchain-Academy/ethereum-developer-program/blob/readme/assets/images/Videos.png" alt="Videos" width="45%">
+    <img src="https://github.com/Kerala-Blockchain-Academy/ethereum-developer-program/blob/main/assets/images/Videos.png" alt="Videos" width="45%">
   </a>
 </p>
 
 <p align="center">
   <a href="https://github.com/Kerala-Blockchain-Academy/ethereum-developer-program/discussions">
-    <img src="https://github.com/Kerala-Blockchain-Academy/ethereum-developer-program/blob/readme/assets/images/GitHub.png" alt="GitHub" width="35%">
+    <img src="https://github.com/Kerala-Blockchain-Academy/ethereum-developer-program/blob/main/assets/images/GitHub.png" alt="GitHub" width="35%">
   </a>
   <a href="https://t.me/+nhLjl_I35EViZWM1">
-    <img src="https://github.com/Kerala-Blockchain-Academy/ethereum-developer-program/blob/readme/assets/images/Telegram.png" alt="Telegram" width="35%">
+    <img src="https://github.com/Kerala-Blockchain-Academy/ethereum-developer-program/blob/main/assets/images/Telegram.png" alt="Telegram" width="35%">
   </a>
 </p>
 
