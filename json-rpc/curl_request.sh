@@ -15,9 +15,9 @@ execute() {
 }
 
 req_builder() {
-	local method="$1"
-	local params="$2"
-	local id="$3"
+	method="$1"
+	params="$2"
+	id="$3"
 
 	if [[ -z "$method" ]]; then
 		echo "$(logred [ERROR]): Method argument is required." 1>&2
@@ -32,8 +32,8 @@ req_builder() {
 }
 
 req_handler() {
-	local response=$(curl -s -w "\n%{http_code}" -H "Content-Type: application/json" --data "$@" "${CHAIN_URL}")
-	local status=$(echo "$response" | tail -n1)
+	response=$(curl -s -w "\n%{http_code}" -H "Content-Type: application/json" --data "$@" "${CHAIN_URL}")
+	status=$(echo "$response" | tail -n1)
 
 	if [ "$status" != "200" ]; then
 		echo "$(logred [ERROR]): Chain is unreachable at $(logblu ${CHAIN_URL})" 1>&2
@@ -57,69 +57,73 @@ logcyn() { echo -e "\033[36m$@\033[0m"; }
 
 # JSON-RPC API Methods
 web3_clientVersion() {
-	local req=$(req_builder "web3_clientVersion")
-	local body=$(req_handler "$req")
+	req=$(req_builder "web3_clientVersion")
+	body=$(req_handler "$req")
 	echo "Client: $(logmag $(body_parser "$body"))"
 	return 0
 }
 
 net_version() {
-	local req=$(req_builder "net_version")
-	local body=$(req_handler "$req")
+	req=$(req_builder "net_version")
+	body=$(req_handler "$req")
 	echo "Network: $(logcyn $(body_parser "$body"))"
 	return 0
 }
 
 net_listening() {
-	local req=$(req_builder "net_listening")
-	local body=$(req_handler "$req")
+	req=$(req_builder "net_listening")
+	body=$(req_handler "$req")
 	echo "Listening: $(logcyn $(body_parser "$body"))"
 	return 0
 }
 
 net_peerCount() {
-	local req=$(req_builder "net_peerCount")
-	local body=$(req_handler "$req")
+	req=$(req_builder "net_peerCount")
+	body=$(req_handler "$req")
 	echo "Peers: $(logcyn $(body_parser "$body"))"
 	return 0
 }
 
 eth_chainId() {
-	local req=$(req_builder "eth_chainId")
-	local body=$(req_handler "$req")
+	req=$(req_builder "eth_chainId")
+	body=$(req_handler "$req")
 	echo "Chain ID: $(loggrn $(body_parser "$body"))"
 	return 0
 }
 
 eth_gasPrice() {
-	local req=$(req_builder "eth_gasPrice")
-	local body=$(req_handler "$req")
+	req=$(req_builder "eth_gasPrice")
+	body=$(req_handler "$req")
 	echo "Gas Price: $(loggrn $(body_parser "$body"))"
 	return 0
 }
 
 eth_accounts() {
-	local req=$(req_builder "eth_accounts")
-	local body=$(req_handler "$req")
+	req=$(req_builder "eth_accounts")
+	body=$(req_handler "$req")
 	echo "Accounts: $(loggrn $(body_parser "$body"))"
 	return 0
 }
 
 eth_blockNumber() {
-	local req=$(req_builder "eth_blockNumber")
-	local body=$(req_handler "$req")
+	req=$(req_builder "eth_blockNumber")
+	body=$(req_handler "$req")
 	echo "Block Number: $(loggrn $(body_parser "$body"))"
 	return 0
 }
 
 eth_getBlockByNumber() {
-	local req=$(req_builder "eth_getBlockByNumber" '["latest",true]')
-	local body=$(req_handler "$req")
+	req=$(req_builder "eth_getBlockByNumber" '["latest",true]')
+	body=$(req_handler "$req")
 	echo "Latest Block: $(loggrn $(body_parser "$body"))"
 	return 0
 }
 
-# Config
-CHAIN_URL="http://127.0.0.1:8545"
+if [[ -z "$1" ]]; then
+    echo "$(logred [ERROR]): CHAIN_URL is required." 1>&2
+    exit 1
+fi
+
+CHAIN_URL="$1"
 
 execute
