@@ -3,15 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.mjs",
-  "scripts": {
-    "node": "hardhat node"
-  },
-  "keywords": [],
   "author": "Kerala Blockchain Academy",
   "license": "MIT",
   "dependencies": {
     "ethers": "^6.13.5",
-    "hardhat": "^2.22.19",
     "solc": "^0.8.29"
   }
 }

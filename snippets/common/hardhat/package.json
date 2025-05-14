@@ -1,0 +1,10 @@
+{
+  "name": "common-hardhat",
+  "version": "1.0.0",
+  "scripts": {
+    "node": "hardhat node"
+  },
+  "dependencies": {
+    "hardhat": "^2.24.0"
+  }
+}

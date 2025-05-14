@@ -2,13 +2,12 @@
   "name": "viem-snippet",
   "module": "index.ts",
   "type": "module",
-  "scripts": {
-    "node": "hardhat node"
-  },
   "dependencies": {
-    "hardhat": "^2.22.19",
     "solc": "^0.8.29",
     "tsx": "^4.19.3",
     "viem": "^2.23.10"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.18"
   }
 }
