@@ -14,7 +14,11 @@ const client = createTestClient({
 const [account] = await client.getAddresses()
 console.log('Address:', account)
 
+console.log('Balance:', await client.getBalance({ address: account }))
+
 console.log('Chain ID:', client.chain.id)
+
+console.log('Current Block:', await client.getBlockNumber())
 
 const CONTRACT_FILE = './../common/contracts/Storage.sol'
 
@@ -43,7 +47,7 @@ const abi = output.contracts[CONTRACT_FILE].Storage.abi
 const bytecode = output.contracts[CONTRACT_FILE].Storage.evm.bytecode.object
 
 let hash = await client.deployContract({ abi, account, bytecode, args: [] })
-console.log('Transaction Hash:', hash)
+console.log('Deployment Tx Hash:', hash)
 
 const receipt = await client.getTransactionReceipt({
   hash,
@@ -54,11 +58,11 @@ const { request } = await client.simulateContract({
   account,
   address: receipt.contractAddress!,
   functionName: 'store',
-  args: ['Hello, KBA!'],
+  args: ['This message is stored using viem.'],
 })
 
 hash = await client.writeContract(request)
-console.log('Transaction Hash:', hash)
+console.log('Storage Tx Hash:', hash)
 
 const message = await client.readContract({
   abi,
@@ -68,5 +72,4 @@ const message = await client.readContract({
 })
 console.log('Message:', message)
 
-const latestBlock = await client.getBlockNumber()
-console.log('Latest Block:', latestBlock)
+console.log('Latest Block:', await client.getBlockNumber())
