@@ -1,0 +1,10 @@
+[package]
+name = "rust"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+alloy = { version = "1.0.1", features = ["full"] }
+eyre = "0.6.12"
+tokio = { version = "1.45.0", features = ["full"] }
+
