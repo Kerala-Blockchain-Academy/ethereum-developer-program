@@ -20,7 +20,7 @@ console.log('Chain ID:', client.chain.id)
 
 console.log('Current Block:', await client.getBlockNumber())
 
-const CONTRACT_FILE = './../common/contracts/Storage.sol'
+const CONTRACT_FILE = './../contracts/Storage/Storage.sol'
 
 const content = readFileSync(CONTRACT_FILE).toString()
 

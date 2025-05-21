@@ -8,10 +8,10 @@ use eyre::Result;
 sol!(
     #[sol(
         rpc,
-        bytecode = include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/../common/contracts/Storage.bin"))
+        bytecode = include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/../contracts/Storage/Storage.bin"))
     )]
     Storage,
-    "../common/contracts/Storage.json"
+    "../contracts/Storage/Storage.json"
 );
 
 #[tokio::main]

@@ -6,10 +6,10 @@ from eth_account import Account
 def main():
     w3 = Web3(Web3.HTTPProvider("http://127.0.0.1:8545"))
 
-    with open("../common/contracts/Storage.json", "r", -1, "utf-8") as a:
+    with open("../contracts/Storage/Storage.json", "r", -1, "utf-8") as a:
         abi = json.load(a)
 
-    with open("../common/contracts/Storage.bin", "r", -1, "utf-8") as b:
+    with open("../contracts/Storage/Storage.bin", "r", -1, "utf-8") as b:
         bytecode = b.read()
 
     account = Account.from_key(
