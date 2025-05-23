@@ -1,0 +1,9 @@
+[submodule "examples/rust-dapp-example"]
+	path = examples/rust-dapp-example
+	url = https://github.com/tr1sm0s1n/rust-dapp-example.git
+[submodule "examples/go-dapp-example"]
+	path = examples/go-dapp-example
+	url = https://github.com/tr1sm0s1n/go-dapp-example.git
+[submodule "examples/fastapi-brownie-dapp"]
+	path = examples/fastapi-brownie-dapp
+	url = https://github.com/tr1sm0s1n/fastapi-brownie-dapp.git
