@@ -7,3 +7,12 @@
 [submodule "examples/fastapi-brownie-dapp"]
 	path = examples/fastapi-brownie-dapp
 	url = https://github.com/tr1sm0s1n/fastapi-brownie-dapp.git
+[submodule "examples/next-trpc-dapp"]
+	path = examples/next-trpc-dapp
+	url = https://github.com/tr1sm0s1n/next-trpc-dapp.git
+[submodule "examples/qwik-gin-dapp"]
+	path = examples/qwik-gin-dapp
+	url = https://github.com/tr1sm0s1n/qwik-gin-dapp.git
+[submodule "examples/elysia-viem-api"]
+	path = examples/elysia-viem-api
+	url = https://github.com/tr1sm0s1n/elysia-viem-api
