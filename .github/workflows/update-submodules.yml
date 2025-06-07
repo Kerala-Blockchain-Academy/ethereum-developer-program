@@ -34,7 +34,10 @@ jobs:
 
       - name: Update submodules
         run: |
-          git submodule update --remote --recursive
+          git submodule foreach --quiet '
+            echo "Updating $name ..."
+            git pull origin $(git rev-parse --abbrev-ref HEAD)
+          '
 
       - name: Check for changes
         id: changes
