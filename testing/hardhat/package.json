@@ -1,0 +1,15 @@
+{
+  "name": "testing-with-hardhat",
+  "version": "1.0.0",
+  "scripts": {
+    "node": "npx hardhat node",
+    "test": "npx hardhat test",
+    "deploy": "npx hardhat ignition deploy ignition/modules/Cert.ts --network local"
+  },
+  "dependencies": {
+    "hardhat": "^2.24.3"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox-viem": "^3.0.0"
+  }
+}
