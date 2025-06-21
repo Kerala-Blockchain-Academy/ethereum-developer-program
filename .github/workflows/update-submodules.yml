@@ -1,10 +1,6 @@
 name: Update Submodules
 
 on:
-  # Trigger on pushes to main branch
-  push:
-    branches: [main]
-
   # Manual trigger
   workflow_dispatch:
 
@@ -50,9 +46,12 @@ jobs:
             echo "changed=true" >> $GITHUB_OUTPUT
           fi
 
-      - name: Commit and push changes
+      - name: Create Pull Request
         if: steps.changes.outputs.changed == 'true'
         run: |
+          BRANCH_NAME="update-submodules-$(date +%Y%m%d-%H%M%S)"
+          git checkout -b $BRANCH_NAME
+
           git add .
 
           SUBMODULE_CHANGES=$(git diff --cached --submodule=short)
@@ -60,12 +59,32 @@ jobs:
           git commit -m "🔄 | auto-update submodules to latest commits
 
           ${SUBMODULE_CHANGES}"
-          git push
+
+          git push origin $BRANCH_NAME
+
+          gh pr create \
+            --title "🔄 | auto-update submodules to latest commits" \
+            --body "This PR updates submodules to their latest commits.
+
+          ## Changes
+          \`\`\`
+          ${SUBMODULE_CHANGES}
+          \`\`\`
+
+          This PR was automatically created by the Update Submodules workflow." \
+            --base main \
+            --head $BRANCH_NAME \
+            --label "dependencies" \
+            --label "automated"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create summary
         if: steps.changes.outputs.changed == 'true'
         run: |
-          echo "## Submodules Updated ⬆️" >> $GITHUB_STEP_SUMMARY
+          echo "## Pull Request Created ❕❕" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "The following submodules were updated:" >> $GITHUB_STEP_SUMMARY
+          echo "A pull request has been created to update submodules." >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Changes:" >> $GITHUB_STEP_SUMMARY
           git log -1 --pretty=format:"- Commit: %h%n- Message: %s%n- Author: %an%n- Date: %ad" --date=short >> $GITHUB_STEP_SUMMARY
