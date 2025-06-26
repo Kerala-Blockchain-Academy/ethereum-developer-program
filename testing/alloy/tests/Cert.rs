@@ -1,5 +1,6 @@
 use alloy::{
     network::{Ethereum, EthereumWallet},
+    primitives::{U256, keccak256},
     providers::{
         Identity, Provider, ProviderBuilder, RootProvider,
         fillers::{
@@ -8,10 +9,12 @@ use alloy::{
         },
         layers::AnvilProvider,
     },
+    rpc::types::Filter,
     sol,
+    sol_types::SolEvent,
 };
 
-use crate::Cert::CertInstance;
+use crate::Cert::{CertInstance, Certificate, Issued};
 
 type MiddlewareStack = FillProvider<
     JoinFill<
@@ -88,5 +91,145 @@ async fn test_deploy() {
             .await
             .expect("Failed to fetch latest block"),
         0
-    )
+    );
+
+    let deployer = contract
+        .provider()
+        .get_accounts()
+        .await
+        .expect("Failed to get accounts")[0];
+    assert_eq!(deployer.create(0), *contract.address());
+}
+
+#[tokio::test]
+async fn test_issue() {
+    let contract = deploy_contract().await;
+
+    let id = U256::from(14);
+
+    let c = Certificate {
+        name: "Deren".to_string(),
+        course: "MBCC".to_string(),
+        grade: "S".to_string(),
+        date: "26-06-2025".to_string(),
+    };
+
+    let receipt = contract
+        .issue(
+            id.clone(),
+            c.name,
+            c.course.clone(),
+            c.grade.clone(),
+            c.date,
+        )
+        .send()
+        .await
+        .expect("Failed to issue certificate")
+        .get_receipt()
+        .await
+        .expect("Failed to get receipt for issue transaction");
+
+    assert!(receipt.status());
+
+    let filter = Filter::new().event_signature(Issued::SIGNATURE_HASH);
+    let log = &contract
+        .provider()
+        .get_logs(&filter)
+        .await
+        .expect("Failed to fetch logs")[0];
+
+    let decode_log = log
+        .log_decode::<Issued>()
+        .expect("Failed to decode Issued event");
+
+    assert_eq!(decode_log.inner.address, *contract.address());
+    assert_eq!(decode_log.inner.course, keccak256(c.course));
+    assert_eq!(decode_log.inner.id, id);
+    assert_eq!(decode_log.inner.grade, c.grade);
+}
+
+#[tokio::test]
+async fn test_certificates() {
+    let contract = deploy_contract().await;
+
+    let id = U256::from(885);
+
+    let c = Certificate {
+        name: "Shawn".to_string(),
+        course: "MBCC".to_string(),
+        grade: "A".to_string(),
+        date: "26-06-2025".to_string(),
+    };
+
+    let receipt = contract
+        .issue(
+            id.clone(),
+            c.name.clone(),
+            c.course.clone(),
+            c.grade.clone(),
+            c.date.clone(),
+        )
+        .send()
+        .await
+        .expect("Failed to issue certificate")
+        .get_receipt()
+        .await
+        .expect("Failed to get receipt for issue transaction");
+
+    assert!(receipt.status());
+
+    let certificate = contract
+        .Certificates(id)
+        .call()
+        .await
+        .expect("Failed to fetch certificate");
+
+    assert_eq!(c.name, certificate._0);
+    assert_eq!(c.course, certificate._1);
+    assert_eq!(c.grade, certificate._2);
+    assert_eq!(c.date, certificate._3);
+}
+
+#[tokio::test]
+async fn test_modifier() {
+    let contract = deploy_contract().await;
+
+    let other = contract
+        .provider()
+        .get_accounts()
+        .await
+        .expect("Failed to get accounts")[1];
+
+    let id = U256::from(355);
+
+    let c = Certificate {
+        name: "Lisa".to_string(),
+        course: "MBCC".to_string(),
+        grade: "B".to_string(),
+        date: "26-06-2025".to_string(),
+    };
+
+    let error = contract
+        .issue(
+            id.clone(),
+            c.name,
+            c.course.clone(),
+            c.grade.clone(),
+            c.date,
+        )
+        .from(other)
+        .send()
+        .await
+        .expect_err("Modifier allowed other");
+
+    let error_message = error
+        .as_revert_data()
+        .expect("Failed to get revert message");
+
+    assert!(
+        error_message
+            .0
+            .windows(b"Access Denied".len())
+            .any(|w| w == b"Access Denied")
+    );
 }
