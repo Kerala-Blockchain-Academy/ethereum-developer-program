@@ -40,28 +40,28 @@ Join our KBA community for support as you explore open-source projects, hackatho
 
 # 🧩 Languages, Tools & Frameworks
 
-<img src="./assets/logos/Solidity.svg" alt="Solidity Badge" width="60" height="auto" />
-<img src="./assets/logos/JavaScript.svg" alt="JavaScript Badge" width="60" height="auto" />
-<img src="./assets/logos/TypeScript.svg" alt="TypeScript Badge" width="60" height="auto" />
-<img src="./assets/logos/NodeJS.svg" alt="Node.js Badge" width="60" height="auto" />
-<img src="./assets/logos/Go.svg" alt="Go Badge" width="60" height="auto" />
-<img src="./assets/logos/Rust.svg" alt="Rust Badge" width="60" height="auto" />
-<img src="./assets/logos/Python.svg" alt="Python Badge" width="60" height="auto" />
-<img src="./assets/logos/Vyper.svg" alt="Vyper Badge" width="60" height="auto" />
-<img src="./assets/logos/Hardhat.svg" alt="Hardhat Badge" width="60" height="auto" />
-<img src="./assets/logos/Besu.svg" alt="Besu Badge" width="60" height="auto" />
-<img src="./assets/logos/Docker.svg" alt="Docker Badge" width="60" height="auto" />
-<img src="./assets/logos/MetaMask.svg" alt="MetaMask Badge" width="60" height="auto" />
-<img src="./assets/logos/WalletConnect.svg" alt="WalletConnect Badge" width="60" height="auto" />
-<img src="./assets/logos/React.svg" alt="React Badge" width="60" height="auto" />
-<img src="./assets/logos/GraphQL.svg" alt="GraphQL Badge" width="60" height="auto" />
-<img src="./assets/logos/Bun.svg" alt="Bun Badge" width="60" height="auto" />
-<img src="./assets/logos/Express.svg" alt="Express Badge" width="60" height="auto" />
-<img src="./assets/logos/Remix.svg" alt="Remix Badge" width="60" height="auto" />
-<img src="./assets/logos/Etherscan.svg" alt="Etherscan Badge" width="60" height="auto" />
-<img src="./assets/logos/Linux.svg" alt="Linux Badge" width="60" height="auto" />
-<img src="./assets/logos/Bash.svg" alt="Bash Badge" width="60" height="auto" />
-<img src="./assets/logos/Ubuntu.svg" alt="Ubuntu Badge" width="60" height="auto" />
-<img src="./assets/logos/VSCode.svg" alt="VSCode Badge" width="60" height="auto" />
+<img src="./assets/logos/Solidity.svg" alt="Solidity Badge" width="50" height="auto" />
+<img src="./assets/logos/JavaScript.svg" alt="JavaScript Badge" width="50" height="auto" />
+<img src="./assets/logos/TypeScript.svg" alt="TypeScript Badge" width="50" height="auto" />
+<img src="./assets/logos/NodeJS.svg" alt="Node.js Badge" width="50" height="auto" />
+<img src="./assets/logos/Go.svg" alt="Go Badge" width="50" height="auto" />
+<img src="./assets/logos/Rust.svg" alt="Rust Badge" width="50" height="auto" />
+<img src="./assets/logos/Python.svg" alt="Python Badge" width="50" height="auto" />
+<img src="./assets/logos/Vyper.svg" alt="Vyper Badge" width="50" height="auto" />
+<img src="./assets/logos/Hardhat.svg" alt="Hardhat Badge" width="50" height="auto" />
+<img src="./assets/logos/Besu.svg" alt="Besu Badge" width="50" height="auto" />
+<img src="./assets/logos/Docker.svg" alt="Docker Badge" width="50" height="auto" />
+<img src="./assets/logos/MetaMask.svg" alt="MetaMask Badge" width="50" height="auto" />
+<img src="./assets/logos/WalletConnect.svg" alt="WalletConnect Badge" width="50" height="auto" />
+<img src="./assets/logos/React.svg" alt="React Badge" width="50" height="auto" />
+<img src="./assets/logos/GraphQL.svg" alt="GraphQL Badge" width="50" height="auto" />
+<img src="./assets/logos/Bun.svg" alt="Bun Badge" width="50" height="auto" />
+<img src="./assets/logos/Express.svg" alt="Express Badge" width="50" height="auto" />
+<img src="./assets/logos/Remix.svg" alt="Remix Badge" width="50" height="auto" />
+<img src="./assets/logos/Etherscan.svg" alt="Etherscan Badge" width="50" height="auto" />
+<img src="./assets/logos/Linux.svg" alt="Linux Badge" width="50" height="auto" />
+<img src="./assets/logos/Bash.svg" alt="Bash Badge" width="50" height="auto" />
+<img src="./assets/logos/Ubuntu.svg" alt="Ubuntu Badge" width="50" height="auto" />
+<img src="./assets/logos/VSCode.svg" alt="VSCode Badge" width="50" height="auto" />
 
 </div>
