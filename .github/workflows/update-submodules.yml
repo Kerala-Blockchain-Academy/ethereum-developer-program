@@ -27,12 +27,34 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git config --global pull.rebase false
 
       - name: Update submodules
         run: |
+          git submodule status
+
           git submodule foreach --quiet '
             echo "Updating $name ..."
-            git pull origin $(git rev-parse --abbrev-ref HEAD)
+            
+            CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD 2>/dev/null || echo "")
+            
+            if [ "$CURRENT_BRANCH" = "HEAD" ]; then
+              echo "Submodule $name is in detached HEAD state, checking out main branch..."
+              git checkout main 2>/dev/null || git checkout master 2>/dev/null || {
+                echo "Could not checkout main/master branch for $name"
+                exit 1
+              }
+              CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+            fi
+            
+            echo "Current branch: $CURRENT_BRANCH"
+            
+            git fetch origin
+            
+            if ! git pull origin $CURRENT_BRANCH; then
+              echo "Pull failed for $name, trying to reset to origin/$CURRENT_BRANCH"
+              git reset --hard origin/$CURRENT_BRANCH
+            fi
           '
 
       - name: Check for changes
@@ -62,9 +84,23 @@ jobs:
 
           git push origin $BRANCH_NAME
 
-          gh pr create \
-            --title "🔄 | auto-update submodules to latest commits" \
-            --body "This PR updates submodules to their latest commits.
+          EXISTING_PR=$(gh pr list --state open --label "automated" --label "dependencies" --json number --jq '.[0].number' 2>/dev/null || echo "")
+
+          if [ -n "$EXISTING_PR" ]; then
+            echo "Existing PR #$EXISTING_PR found, updating it..."
+            gh pr edit $EXISTING_PR --body "This PR updates submodules to their latest commits.
+
+          ## Changes
+          \`\`\`
+          ${SUBMODULE_CHANGES}
+          \`\`\`
+
+          This PR was automatically updated by the Update Submodules workflow on $(date)."
+          else
+            echo "Creating new PR..."
+            gh pr create \
+              --title "🔄 | auto-update submodules to latest commits" \
+              --body "This PR updates submodules to their latest commits.
 
           ## Changes
           \`\`\`
@@ -72,19 +108,27 @@ jobs:
           \`\`\`
 
           This PR was automatically created by the Update Submodules workflow." \
-            --base main \
-            --head $BRANCH_NAME \
-            --label "dependencies" \
-            --label "automated"
+              --base main \
+              --head $BRANCH_NAME \
+              --label "dependencies" \
+              --label "automated"
+          fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create summary
         if: steps.changes.outputs.changed == 'true'
         run: |
-          echo "## Pull Request Created ❕❕" >> $GITHUB_STEP_SUMMARY
+          echo "## Pull Request Created/Updated ✅" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "A pull request has been created to update submodules." >> $GITHUB_STEP_SUMMARY
+          echo "A pull request has been created or updated to update submodules." >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "### Changes:" >> $GITHUB_STEP_SUMMARY
           git log -1 --pretty=format:"- Commit: %h%n- Message: %s%n- Author: %an%n- Date: %ad" --date=short >> $GITHUB_STEP_SUMMARY
+
+      - name: No changes summary
+        if: steps.changes.outputs.changed == 'false'
+        run: |
+          echo "## No Changes Detected ℹ️" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "All submodules are already up to date." >> $GITHUB_STEP_SUMMARY
