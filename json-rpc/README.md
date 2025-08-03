@@ -17,5 +17,5 @@ git pull
 Execute the shell script to interact with Ethereum node and retrieve vital information like 'chain ID', 'latest block', 'gas price', etc.
 
 ```sh
-./json-rpc/curl_request.sh <rpc-url>
+./json-rpc/eth-diagnostics.sh <RPC_URL>
 ```
